@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Cloaking Demo",
-  description: "İki katmanlı cloaking sistemi demo",
+  title: "Türkiye A Milli Futbol Takımı - Tarihçe, Başarılar ve Detaylı Bilgiler",
+  description: "Türkiye A Milli Futbol Takımı hakkında kapsamlı bilgiler. Tarihçe, başarılar, ünlü futbolcular, teknik direktörler ve unutulmaz maçlar. Ay-yıldızlı forma.",
 };
 
 export default function RootLayout({
