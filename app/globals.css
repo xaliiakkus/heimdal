@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  /* Primary palette: resolved from .daa-demo CSS vars */
+  --color-primary-400: var(--color-primary-light);
+  --color-primary-500: var(--color-primary-main);
+  --color-primary-600: var(--color-primary-dark);
+
+  /* Custom animations */
+  --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-shimmer: shimmer 2s linear infinite;
+  --animate-fade-in: fadeIn 0.3s ease-out;
+  --animate-slide-down: slideDown 0.3s ease-out;
+
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Custom shadows */
+  --shadow-glow: 0 0 20px rgba(234, 179, 8, 0.3);
+  --shadow-glow-lg: 0 0 30px rgba(234, 179, 8, 0.4);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Demo DAA theme variables */
+.daa-demo {
+  --color-primary-main: #eab308;
+  --color-primary-dark: #ca8a04;
+  --color-primary-light: #facc15;
+  --color-background-main: #0f172a;
+  --color-background-card: #1e293b;
+  --color-background-alt: #334155;
+  --color-text-main: #ffffff;
+  --color-text-secondary: #cbd5e1;
+  --color-text-muted: #94a3b8;
+}
+
+/* Hide scrollbar for horizontal scroll areas */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Glass effect for header/footer */
+.glass-effect {
+  backdrop-filter: blur(12px);
+}
+
+.app-navigation .pointer-events-none {
+  pointer-events: none;
+}
+.app-navigation .pointer-events-auto {
+  pointer-events: auto;
+}
