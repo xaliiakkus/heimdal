@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-const DEMO_PATH = "/demo/daa";
+const DEMO_PATH = "/demo";
 const HOME_PATH = "/";
 
 function isMobile(userAgent: string): boolean {
@@ -21,17 +21,11 @@ function isBot(userAgent: string): boolean {
   );
 }
 
-function isFromTurkey(request: NextRequest): boolean {
-  const country = request.headers.get("x-vercel-ip-country");
-  return country === "TR";
-}
-
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const userAgent = request.headers.get("user-agent") ?? "";
   const mobile = isMobile(userAgent);
   const bot = isBot(userAgent);
-  const fromTurkey = isFromTurkey(request);
 
   // Botlar (mobil bot dahil: Googlebot-Mobile vb.) → önce ele alınır, her zaman normal içerik; DaaPage asla gösterilmez
   if (bot) {
@@ -39,17 +33,15 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // Ana sayfa (/)
+  // Tüm ülkeler aynı mantık: mobil → DaaPage, web (masaüstü) → NormalContent
   if (pathname === HOME_PATH) {
-    if (fromTurkey) return NextResponse.redirect(new URL(DEMO_PATH, request.url));
     if (mobile) return NextResponse.redirect(new URL(DEMO_PATH, request.url));
-    return NextResponse.next(); // web, TR değil: NormalContent
+    return NextResponse.next(); // web: NormalContent
   }
 
-  // /demo veya /demo/daa → DaaPage sadece mobil veya Türkiye
   if (pathname.startsWith(DEMO_PATH)) {
-    if (!mobile && !fromTurkey) return NextResponse.redirect(new URL(HOME_PATH, request.url));
-    return NextResponse.next(); // mobil veya TR: DaaPage
+    if (!mobile) return NextResponse.redirect(new URL(HOME_PATH, request.url));
+    return NextResponse.next(); // mobil: DaaPage
   }
 
   return NextResponse.next();
