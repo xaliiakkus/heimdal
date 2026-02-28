@@ -2,8 +2,8 @@ import type { Metadata, Viewport } from "next";
 import DaaPage from "@/components/DaaPage";
 
 export const metadata: Metadata = {
-  title: "www.amillitakimimiz.com",
-  description: "Deneme Bonusu – Demo",
+  title: "www.millitakimimiz.com",
+  description: "Deneme Bonusu",
 };
 
 export const viewport: Viewport = {
