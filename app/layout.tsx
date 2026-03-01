@@ -13,6 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="tr">
+      <meta name="yandex-verification" content="1cb8dbbe72296f40" />
       <body>{children}</body>
     </html>
   );
