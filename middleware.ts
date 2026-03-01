@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-const DEMO_PATH = "/demo";
+const DEMO_PATH = "/deneme/bonusu";
 const HOME_PATH = "/";
 
 function isMobile(userAgent: string): boolean {
