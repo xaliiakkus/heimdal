@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const baseUrl ="https://www.amillitakimimiz.com";
+const baseUrl ="https://millitakimimiz.rofi.io";
 
 export default function robots(): MetadataRoute.Robots {
   return {

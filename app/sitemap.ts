@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const baseUrl ="https://www.amillitakimimiz.com";
+const baseUrl ="https://millitakimimiz.rofi.io";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
@@ -9,12 +9,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1,
-    },
-    {
-      url: `${baseUrl}/deneme/bonus`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
+    }
   ];
 }
