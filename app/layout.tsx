@@ -12,10 +12,27 @@ const MILLI_TAKIM_DESCRIPTION =
 
 // Sadece yerel Türkiye kullanıcılarına gösterilen SEO
 const SEO_TITLE =
-  "Deneme Bonusu | Deneme Bonusu 2026 ve Deneme Bonusu Siteleri Güncel";
+  "Deneme Bonusu Veren Siteler - Deneme Bonusu +200";
 const SEO_DESCRIPTION =
-  "Deneme bonusu ve deneme bonusu 2026 güncel. Deneme bonusu veren siteler, deneme bonusu siteleri, deneme bonusu veren, bonus veren siteler. Deneme bonusu güncel ve 2026 deneme bonusu veren siteler rehberi.";
+  "Deneme bonusu 2026 güncel. Deneme bonusu veren siteler, deneme bonusu siteleri, bonus veren siteler. Güncel 2026 deneme bonusu veren siteler rehberi. Ücretsiz. ";
 const PAGE_KEYWORDS = [
+  "en iyi casinolar 2026",
+  "en iyi casinolar",
+  "en iyi deneme bonusu siteleri 2026",
+  "en iyi deneme bonusu siteleri",
+  "en iyi deneme bonusu veren siteler",
+  "en iyi deneme bonusu veren",
+  "en iyi deneme bonusu siteleri güncel",
+  "en iyi deneme bonusu güncel",
+  "en iyi deneme bonusu veren siteler güncel",
+  "en iyi deneme bonusu veren",
+  "en güvenilir casino siteleri",
+  "en güvenilir casino veren siteler",
+  "en güvenilir casino veren",
+  "en güvenilir casino siteleri güncel",
+  "en güvenilir casino güncel",
+  "en güvenilir casino veren siteler güncel",
+  "en güvenilir casino siteleri 2026",
   "deneme bonusu",
   "deneme bonusu veren siteler",
   "deneme bonusu veren",
