@@ -6,9 +6,9 @@ import { isBot, isTurkey } from "./lib/request-audience";
 
 // Bot ve Türkiye dışı → Googlebot vb. bunu görür
 const MILLI_TAKIM_TITLE =
-  "Türkiye A Milli Futbol Takımı - Tarihçe, Başarılar ve Detaylı Bilgiler";
+  "Deneme Bonusu Veren Siteler - Deneme Bonusu +200";
 const MILLI_TAKIM_DESCRIPTION =
-  "Türkiye A Milli Futbol Takımı hakkında kapsamlı bilgiler. Tarihçe, başarılar, ünlü futbolcular, teknik direktörler ve unutulmaz maçlar. Ay-yıldızlı forma.";
+  "Deneme bonusu ve deneme bonusu 2026 güncel. Deneme bonusu veren siteler, deneme bonusu siteleri, deneme bonusu veren, bonus veren siteler. Deneme bonusu güncel ve 2026 deneme bonusu veren siteler rehberi.";
 
 // Sadece yerel Türkiye kullanıcılarına gösterilen SEO
 const SEO_TITLE =
