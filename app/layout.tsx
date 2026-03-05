@@ -3,7 +3,7 @@ import { headers } from "next/headers";
 import "./globals.css";
 import { getServerSiteUrl } from "./lib/site-url";
 import { isBot, isTurkey } from "./lib/request-audience";
-
+import { Analytics } from "@vercel/analytics/next"
 // Bot ve Türkiye dışı → Googlebot vb. bunu görür
 const MILLI_TAKIM_TITLE =
   "Deneme Bonusu Veren Siteler - Deneme Bonusu +200";
@@ -247,6 +247,7 @@ export default async function RootLayout({
             dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
           />
         ))}
+        <Analytics />
       </head>
       <body>{children}</body>
     </html>
