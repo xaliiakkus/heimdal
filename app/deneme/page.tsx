@@ -26,6 +26,18 @@ const PAGE_KEYWORDS = [
   'deneme bonusu güncel',
   'bonus veren siteler',
   '2026 deneme bonusu veren siteler',
+  'dene bonusu veren siteler',
+  'deneme bonusu veren sitelerine',
+  'denene bonusu veren siteler',
+  'denenme bonusu veren siteler',
+  'dene bonusu',
+  'deneme bonusu dene',
+  'denene bonusu',
+  'denenme bonus',
+  'bonus dene bonus site',
+  'denene bonusu veren',
+  'deneme bonusu verem',
+  'deneme bonusu verem site',
 ];
 
 export async function generateMetadata(): Promise<Metadata> {
