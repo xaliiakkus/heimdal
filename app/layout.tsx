@@ -111,11 +111,20 @@ export async function generateMetadata(): Promise<Metadata> {
           "x-default": currentUrl,
         },
       },
+      icons: {
+        icon: [
+          { url: `${siteUrl}/icon.svg`, type: "image/svg+xml" },
+          { url: `${siteUrl}/favicon.ico`, sizes: "48x48", type: "image/x-icon" },
+        ],
+        shortcut: `${siteUrl}/favicon.ico`,
+      },
       other: {
         "yandex-verification": "1cb8dbbe72296f40",
         "mobile-web-app-capable": "yes",
         "apple-mobile-web-app-capable": "yes",
         "apple-mobile-web-app-status-bar-style": "black-translucent",
+        "geo.region": "TR",
+        "geo.placename": "Turkey",
       },
     };
   }
@@ -123,8 +132,8 @@ export async function generateMetadata(): Promise<Metadata> {
   // Botlar ve Türkiye dışı → Milli Takım (Googlebot vb. bunu görür)
   return {
     metadataBase: new URL(siteUrl),
-    title: MILLI_TAKIM_TITLE,
-    description: MILLI_TAKIM_DESCRIPTION,
+    title: SEO_TITLE,
+    description: SEO_DESCRIPTION,
     robots: {
       index: true,
       follow: true,
@@ -140,11 +149,20 @@ export async function generateMetadata(): Promise<Metadata> {
       type: "website",
       locale: "tr_TR",
       url: currentUrl,
-      title: MILLI_TAKIM_TITLE,
-      description: MILLI_TAKIM_DESCRIPTION,
+      title: SEO_TITLE,
+      description: SEO_DESCRIPTION,
+    },
+    icons: {
+      icon: [
+        { url: `${siteUrl}/icon.svg`, type: "image/svg+xml" },
+        { url: `${siteUrl}/favicon.ico`, sizes: "48x48", type: "image/x-icon" },
+      ],
+      shortcut: `${siteUrl}/favicon.ico`,
     },
     other: {
       "yandex-verification": "1cb8dbbe72296f40",
+      "geo.region": "TR",
+      "geo.placename": "Turkey",
     },
   };
 }
@@ -161,8 +179,8 @@ function generateStructuredData(
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: MILLI_TAKIM_TITLE,
-        description: MILLI_TAKIM_DESCRIPTION,
+        name: SEO_TITLE,
+        description: SEO_DESCRIPTION,
         url: currentUrl,
         inLanguage: "tr-TR",
       },
