@@ -6,7 +6,7 @@ const navItems = [
   { id: "winners", label: "Kazananlar", icon: `${IMG_BASE}/icons/win.webp` },
   { id: "wheel", label: "Çark", icon: `${IMG_BASE}/icons/wheel.webp` },
   { id: "giveaway", label: "Çekilişler", icon: `${IMG_BASE}/icons/giveaway.webp` },
-  { id: "telegram", label: "Telegram", icon: `${IMG_BASE}/icons/telegram.webp`, href: "https://t.me/grandpashagir", external: true },
+  { id: "telegram", label: "Telegram", icon: `${IMG_BASE}/icons/telegram.webp`, href: "https://t.me/heimdal_bonuslar", external: true },
   { id: "contact", label: "İletişim", icon: `${IMG_BASE}/icons/plus.png` },
 ];
 

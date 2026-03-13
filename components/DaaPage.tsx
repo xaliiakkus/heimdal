@@ -25,7 +25,7 @@ export default function DaaPage() {
         <AppNavigation />
         <FooterCta />
       </div>
-      <h1 className="sr-only">www.amillitakimimiz.com</h1>
+      <h1 className="sr-only">www.rofi.io</h1>
       <PopupModalLazy />
     </div>
   );

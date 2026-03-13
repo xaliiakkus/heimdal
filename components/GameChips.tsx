@@ -21,7 +21,7 @@ export default function GameChips() {
                 <div className="w-full h-full rounded-[10px] border-2 border-[var(--color-background-main)] overflow-hidden bg-black">
                   <img
                     src={chip.image}
-                    alt={chip.name}
+                    alt={chip.alt ?? `${chip.name} - Deneme bonusu ile oyna`}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     loading="lazy"
                   />

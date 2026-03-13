@@ -1,6 +1,5 @@
 import Link from "next/link";
-import { LINK_BASE } from "@/lib/constants";
-import { IMG_BASE } from "@/lib/constants";
+import { LINK_BASE, IMG_BASE, SITE_URLS } from "@/lib/constants";
 import type { CasinoItem } from "@/lib/types";
 import { IconExternalLink } from "./icons";
 
@@ -10,7 +9,7 @@ interface CasinoListProps {
 }
 
 function CasinoRow({ item }: { item: CasinoItem }) {
-  const href = `${LINK_BASE}/${item.slug}`;
+  const href = item.href ?? SITE_URLS[item.slug] ?? `${LINK_BASE}/${item.slug}`;
   return (
     <Link
       href={href}
@@ -25,7 +24,7 @@ function CasinoRow({ item }: { item: CasinoItem }) {
             <div className="absolute -top-[59px] left-0 right-0 flex justify-center z-20 -translate-x-[2px]">
               <img
                 src={`${IMG_BASE}/icons/pin${item.pinned}.svg`}
-                alt="Pinned"
+                alt={`Öne çıkan ${item.bonus} deneme bonusu - Bonus veren siteler`}
                 className="w-28 h-28 object-contain drop-shadow-2xl"
               />
             </div>
@@ -33,14 +32,14 @@ function CasinoRow({ item }: { item: CasinoItem }) {
           {item.stars != null && item.stars > 0 && !item.pinned && (
             <div className="absolute -top-2 left-0 right-0 flex justify-center gap-0.5 z-10">
               {Array.from({ length: item.stars }).map((_, i) => (
-                <img key={i} src={`${IMG_BASE}/icons/star.webp`} alt="" className="w-3.5 h-3.5 object-contain drop-shadow-lg" />
+                <img key={i} src={`${IMG_BASE}/icons/star.webp`} alt="Yıldızlı deneme bonusu" className="w-3.5 h-3.5 object-contain drop-shadow-lg" />
               ))}
             </div>
           )}
           <div className="relative h-full w-full bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-lg flex items-center justify-center overflow-visible border border-white/10 group-hover:border-primary-500/30 transition-all duration-300">
             <img
               src={item.image}
-              alt="Casino logo"
+              alt={item.alt ?? `${item.bonus} ${item.bonusType} - Deneme bonusu veren siteler`}
               className="w-full h-full object-contain p-1.5 transition-transform duration-300 group-hover:scale-105"
               loading="lazy"
             />
@@ -72,13 +71,13 @@ export default function CasinoList({ title, items }: CasinoListProps) {
       <div className="px-4 py-2 border-b border-white/5">
         <div className="flex items-center justify-center gap-3">
           <div className="flex items-center gap-1">
-            <img src={`${IMG_BASE}/icons/star.webp`} alt="" className="w-6 h-6 object-contain" />
-            <img src={`${IMG_BASE}/icons/star.webp`} alt="" className="w-6 h-6 object-contain" />
+            <img src={`${IMG_BASE}/icons/star.webp`} alt="Deneme bonusu" className="w-6 h-6 object-contain" />
+            <img src={`${IMG_BASE}/icons/star.webp`} alt="Bonus veren siteler" className="w-6 h-6 object-contain" />
           </div>
           <h2 className="text-lg font-semibold text-white">{title}</h2>
           <div className="flex items-center gap-1">
-            <img src={`${IMG_BASE}/icons/star.webp`} alt="" className="w-6 h-6 object-contain" />
-            <img src={`${IMG_BASE}/icons/star.webp`} alt="" className="w-6 h-6 object-contain" />
+            <img src={`${IMG_BASE}/icons/star.webp`} alt="Deneme bonusu siteleri" className="w-6 h-6 object-contain" />
+            <img src={`${IMG_BASE}/icons/star.webp`} alt="Güvenilir casino" className="w-6 h-6 object-contain" />
           </div>
         </div>
       </div>

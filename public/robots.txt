@@ -1,4 +1,15 @@
-User-Agent: *
+# Google (mobil-first indeksleme için Googlebot ve Googlebot-Mobile izinli)
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+User-agent: Googlebot-Mobile
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /_next/

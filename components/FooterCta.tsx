@@ -14,7 +14,7 @@ export default function FooterCta() {
             <div className="flex items-center justify-between relative z-10">
               <div className="flex items-center space-x-2">
                 <div className="w-7 h-7 rounded-lg flex items-center justify-center">
-                  <img src={footerCta.icon} alt="Bonus" className="w-7 h-7 object-contain drop-shadow-lg" />
+                  <img src={footerCta.icon} alt={footerCta.alt} className="w-7 h-7 object-contain drop-shadow-lg" />
                 </div>
                 <div>
                   <h3 className="text-white font-bold text-sm leading-none drop-shadow-md">{footerCta.title}</h3>

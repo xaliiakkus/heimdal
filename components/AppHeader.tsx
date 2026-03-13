@@ -15,7 +15,7 @@ export default function AppHeader() {
             <div className="flex items-center justify-between relative z-10">
               <div className="flex items-center space-x-2">
                 <div className="w-7 h-7 rounded-lg flex items-center justify-center relative">
-                  <Image src={headerCta.icon} alt="Bonus" width={28} height={28} className="object-contain drop-shadow-lg" priority />
+                  <Image src={headerCta.icon} alt={headerCta.alt} width={28} height={28} className="object-contain drop-shadow-lg" priority />
                 </div>
                 <div>
                   <h3 className="text-white font-bold text-sm leading-none drop-shadow-md">{headerCta.title}</h3>

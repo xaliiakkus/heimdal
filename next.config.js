@@ -3,6 +3,7 @@ const nextConfig = {
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "img.haberkurt.com", pathname: "/**" },
+      { protocol: "https", hostname: "rofi.io", pathname: "/**" },
     ],
   },
 };

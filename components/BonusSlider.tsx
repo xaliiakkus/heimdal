@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { LINK_BASE } from "@/lib/constants";
+import { LINK_BASE, SITE_URLS } from "@/lib/constants";
 import { sliderItems } from "@/lib/data";
 import { IconExternalLink } from "./icons";
 
@@ -12,7 +12,7 @@ export default function BonusSlider() {
           {sliderItems.map((item, i) => (
             <Link
               key={item.slug}
-              href={`${LINK_BASE}/${item.slug}`}
+              href={item.href ?? SITE_URLS[item.slug] ?? `${LINK_BASE}/${item.slug}`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex-shrink-0 block group cursor-pointer w-[178px]"
