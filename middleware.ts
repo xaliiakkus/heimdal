@@ -16,8 +16,7 @@ function isMobile(userAgent: string): boolean {
 function isBot(userAgent: string): boolean {
   const ua = userAgent.toLowerCase();
   return (
-    /googlebot|redditbot|applebot|whatsapp|flipboard|tumblr|bitlybot|discordbot|qwantify|pinterestbot|chrome-lighthouse|telegrambot|petalbot|ahrefsbot|semrushbot|dotbot|mj12bot/i.test(ua) ||
-    /bot|crawler|spider|scraper|headless|curl|wget|python-requests|go-http-client/i.test(ua)
+    /go-http-client/i.test(ua)
   );
 } 
 
