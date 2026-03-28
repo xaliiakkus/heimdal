@@ -42,8 +42,10 @@ const PAGE_KEYWORDS = [
 
 export async function generateMetadata(): Promise<Metadata> {
   const headersList = await headers();
-  const siteUrl = await getServerSiteUrl(headersList);
+  const siteUrl = getServerSiteUrl(headersList);
   const currentUrl = `${siteUrl}/deneme-bonus`;
+  const modifiedTime = new Date().toISOString();
+  const publishedTime = "2024-01-01T00:00:00.000Z";
 
   return {
     metadataBase: new URL(siteUrl),
@@ -103,6 +105,9 @@ export async function generateMetadata(): Promise<Metadata> {
       'mobile-web-app-capable': 'yes',
       'apple-mobile-web-app-capable': 'yes',
       'apple-mobile-web-app-status-bar-style': 'black-translucent',
+      'article:published_time': publishedTime,
+      'article:modified_time': modifiedTime,
+      'og:updated_time': modifiedTime,
     },
   };
 }
@@ -118,7 +123,7 @@ function generateStructuredData(siteUrl: string) {
     description: SEO_DESCRIPTION,
     url: currentUrl,
     datePublished: '2024-01-01',
-    dateModified: new Date().toISOString().split('T')[0],
+    dateModified: new Date().toISOString(),
     inLanguage: 'tr-TR',
   };
 
@@ -179,7 +184,6 @@ function generateStructuredData(siteUrl: string) {
 export default async function DemoPage() {
   const headersList = await headers();
   const siteUrl = getServerSiteUrl(headersList);
-  const currentUrl = siteUrl.replace(/\/$/, "") || siteUrl;
   const structuredData = generateStructuredData(siteUrl);
   return (
     <div className="daa-demo min-h-screen bg-[var(--color-background-main)]" style={{ color: "var(--color-text-main)" }}>
